@@ -1,0 +1,10 @@
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/bin/Debug/netcoreapp2.2/Core.deps.json
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/bin/Debug/netcoreapp2.2/Core.dll
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/bin/Debug/netcoreapp2.2/Core.pdb
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.csproj.AssemblyReference.cache
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.AssemblyInfoInputs.cache
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.AssemblyInfo.cs
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.csproj.CoreCompileInputs.cache
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.dll
+/Users/francisco.mejias/Projects/PersonalPhotos-master/Code/Core/obj/Debug/netcoreapp2.2/Core.pdb

@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Core.Interfaces;
+using Core.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Xunit;
@@ -19,7 +20,12 @@ namespace PersonalPhotos.Test
         public LoginTests()
         {
             _logins = new Mock<ILogins>();
+
+            var session = Mock.Of<ISession>();
+            var httpContext = Mock.Of<HttpContext>(x => x.Session == session);
+            
             _accessor = new Mock<IHttpContextAccessor>();
+            _accessor.Setup(x => x.HttpContext).Returns(httpContext);
             _controller = new LoginsController(_logins.Object, _accessor.Object);
         }
         
@@ -41,7 +47,21 @@ namespace PersonalPhotos.Test
             var result = await _controller.Login(Mock.Of<LoginViewModel>()) as ViewResult;
             Assert.Equal("Login", result.ViewName, ignoreCase:true);
         }
+
+        [Fact]
+        public async Task Login_GivenCorrectPassword_RedirectToDisplayAction()
+        {
+            const string password = "123";
+            var modelView = Mock.Of<LoginViewModel>(x => x.Email == "a@b.com" && x.Password == password);
+            var model = Mock.Of<User>(x => x.Password == password);
+
+            _logins.Setup(x => x.GetUser(It.IsAny<string>())).ReturnsAsync(model);
+
+            var result = await _controller.Login(modelView);
+            Assert.IsType<RedirectToActionResult>(result);
+        }
         
+        //write test for when password doesn't match you get redirected to login view
         
     }
 }

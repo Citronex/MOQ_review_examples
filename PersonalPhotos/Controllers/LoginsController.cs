@@ -29,7 +29,7 @@ namespace PersonalPhotos.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Invalid login detils");
+                ModelState.AddModelError("", "Invalid login details");
                 return View("Login", model);
             }
 
